@@ -1,0 +1,329 @@
+@-webkit-keyframes react-loading-skeleton {
+    to {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%)
+    }
+}
+
+@keyframes react-loading-skeleton {
+    to {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%)
+    }
+}
+
+.react-loading-skeleton {
+    --base-color: #ebebeb;
+    --highlight-color: #f5f5f5;
+    --animation-duration: 1.5s;
+    --animation-direction: normal;
+    --pseudo-element-display: block;
+    background-color: var(--base-color);
+    width: 100%;
+    border-radius: .25rem;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+    z-index: 1
+}
+
+.react-loading-skeleton:after {
+    content: " ";
+    display: var(--pseudo-element-display);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--base-color)), color-stop(var(--highlight-color)), to(var(--base-color)));
+    background-image: linear-gradient(90deg, var(--base-color), var(--highlight-color), var(--base-color));
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-animation-name: react-loading-skeleton;
+    animation-name: react-loading-skeleton;
+    -webkit-animation-direction: var(--animation-direction);
+    animation-direction: var(--animation-direction);
+    -webkit-animation-duration: var(--animation-duration);
+    animation-duration: var(--animation-duration);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite
+}
+
+ul.Inbox_scrollbar__rLPg2 ::-webkit-scrollbar {
+    width: 8px
+}
+
+ul.Inbox_scrollbar__rLPg2 ::-webkit-scrollbar-track {
+    background: #fff;
+    border-right: 1px;
+    border-right-style: solid;
+    border-color: #000
+}
+
+ul.Inbox_scrollbar__rLPg2 ::-webkit-scrollbar-thumb {
+    background: #000
+}
+
+.Inbox_container__PTkF0 {
+    position: fixed;
+    z-index: 1;
+    top: 24px;
+    right: 24px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px
+}
+
+.Inbox_inbox__v9IQx {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 20px
+}
+
+.Inbox_notifList__ONmmb {
+    overflow-y: auto;
+    height: 300px
+}
+
+.Inbox_notification__TiC5f {
+    background: var(--panel-color);
+    color: var(--text-color);
+    max-height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 300px;
+    gap: 10px;
+    border-radius: 0
+}
+
+.Inbox_imageContainer__iYztN {
+    position: relative;
+    height: 40px;
+    width: 40px
+}
+
+.Inbox_bottomBorder__TEmkv {
+    border-bottom: 2px solid var(--greyed-text-color)
+}
+
+.Inbox_readNotification__rvX5J {
+    background-color: var(--muted-highlight-color);
+    color: var(--highlight-color);
+    border-bottom-color: var(--highlight-color)
+}
+
+.Inbox_timestamp__jAvun {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 10px;
+    text-decoration: underline
+}
+
+.Inbox_imageText__5UITu {
+    width: 80%
+}
+
+.Inbox_inbox__v9IQx:hover {
+    background-color: var(--brighter-muted-highlight-color)
+}
+
+.Inbox_icon__UN9TG {
+    color: var(--highlight-color);
+    width: 20px;
+    height: 100%
+}
+
+.Inbox_number__9Wwkn {
+    color: var(--alt-highlight-color);
+    background-color: var(--highlight-color);
+    font-family: Thaleah;
+    font-size: 15px;
+    padding: 0 6px;
+    position: absolute;
+    top: -5px;
+    right: -5px
+}
+
+@font-face {
+    font-family: revicons;
+    fallback: fallback;
+    src: url(../media/revicons.ff59b316.woff) format("woff"), url(../media/revicons.b96bdb22.ttf) format("ttf"), url(../media/revicons.652e7269.eot) format("ttf")
+}
+
+.react-multi-carousel-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative
+}
+
+.react-multi-carousel-track {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform, transition
+}
+
+.react-multiple-carousel__arrow {
+    position: absolute;
+    outline: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    border-radius: 35px;
+    z-index: 1000;
+    border: 0;
+    background: rgba(0, 0, 0, .5);
+    min-width: 43px;
+    min-height: 43px;
+    opacity: 1;
+    cursor: pointer
+}
+
+.react-multiple-carousel__arrow:hover {
+    background: rgba(0, 0, 0, .8)
+}
+
+.react-multiple-carousel__arrow:before {
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    font-family: revicons;
+    text-align: center;
+    z-index: 2;
+    position: relative
+}
+
+.react-multiple-carousel__arrow:disabled {
+    cursor: default;
+    background: rgba(0, 0, 0, .5)
+}
+
+.react-multiple-carousel__arrow--left {
+    left: calc(4% + 1px)
+}
+
+.react-multiple-carousel__arrow--left:before {
+    content: "\e824"
+}
+
+.react-multiple-carousel__arrow--right {
+    right: calc(4% + 1px)
+}
+
+.react-multiple-carousel__arrow--right:before {
+    content: "\e825"
+}
+
+.react-multi-carousel-dot-list {
+    position: absolute;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    right: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center
+}
+
+.react-multi-carousel-dot button {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 1;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+    border: 2px solid grey;
+    padding: 0;
+    margin: 0 6px 0 0;
+    outline: 0;
+    cursor: pointer
+}
+
+.react-multi-carousel-dot button:hover:active,
+.react-multi-carousel-dot--active button {
+    background: #080808
+}
+
+.react-multi-carousel-item {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+@media (-ms-high-contrast:active),
+(-ms-high-contrast:none) {
+    .react-multi-carousel-item {
+        -ms-flex-negative: 0 !important;
+        flex-shrink: 0 !important
+    }
+    .react-multi-carousel-track {
+        overflow: visible !important
+    }
+}
+
+[dir=rtl].react-multi-carousel-list {
+    direction: rtl
+}
+
+.rtl.react-multiple-carousel__arrow--right {
+    right: auto;
+    left: calc(4% + 1px)
+}
+
+.rtl.react-multiple-carousel__arrow--right:before {
+    content: "\e824"
+}
+
+.rtl.react-multiple-carousel__arrow--left {
+    left: auto;
+    right: calc(4% + 1px)
+}
+
+.rtl.react-multiple-carousel__arrow--left:before {
+    content: "\e825"
+}
