@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.997.0",
-    "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "express.js": "^1.0.0",
     "firebase-admin": "^9.11.1",
