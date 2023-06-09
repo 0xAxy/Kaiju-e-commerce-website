@@ -1,3 +1,12 @@
+
+.custom-size {
+    width: 20px; /* Adjust this to change the width of the image */
+    height: 20px; /* Adjust this to change the height of the image */
+    object-fit: contain; /* This makes sure the aspect ratio of the image is preserved */
+}
+
+
+
 @media (max-width: 768px) {  /* Replace 768px with the breakpoint where you want to start shrinking the search box */
     #main-search-box {
         width: 35%; 
