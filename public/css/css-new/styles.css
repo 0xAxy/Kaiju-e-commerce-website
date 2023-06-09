@@ -1,4 +1,8 @@
-
+@media (max-width: 768px) {  /* Replace 768px with the breakpoint where you want to start shrinking the search box */
+    #main-search-box {
+        width: 35%; 
+    }
+}
 
 
 
