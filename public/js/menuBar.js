@@ -9,9 +9,16 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Get the scrollable div
     var scrollableDiv = document.querySelector('.overflow-y-auto');
-    
+
+    // Determine path for image source
+    var imgPath = window.location.pathname === '/' ? './img/newlogos/newlogo_3840.png' : '../img/newlogos/newlogo_3840.png';
+
     // Get the logo, the text, the menu, and the logo container elements
-    var logo = document.querySelector('img[src="./img/newlogos/newlogo_3840.png"]');
+    var logo = document.querySelector(`img[src="${imgPath}"]`);
+    if (!logo) {
+        console.error(`Logo not found with src: ${imgPath}`);
+        return;
+    }
     var text = document.querySelector('h5');
     var menu = document.querySelector('.menu');
     var logoContainer = document.querySelector('#logo-container');
@@ -60,37 +67,48 @@ document.addEventListener("DOMContentLoaded", function() {
 * If the 'menu' is already visible, it hides the menu.
 */
 
+
+var isMenuOpen = false; // Add a state variable
+
 document.getElementById('bars').addEventListener('click', function() {
     var menu = document.getElementById('menu');
+    var content = document.getElementById('main-content');
     var navbarHeight = 113; // Replace this with your navbar's height
-    if (menu.style.display === "none") {
+
+    if (isMenuOpen) {
+        // If the menu is open, we want to close it and show the main content
+        menu.style.display = "none";
+        content.style.display = "block";
+    } else {
+        // If the menu is not open, we want to open it and hide the main content
         menu.style.display = "block";
         menu.style.width = "100%";
         menu.style.position = "fixed";
         menu.style.top = navbarHeight + "px";  // Offset the top of the menu by the navbar's height
         menu.style.right = "0";
-        menu.style.zIndex = "1000";
-    } else {
-        menu.style.display = "none";
+        menu.style.zIndex = "999"; // Any number smaller than the z-index of .signInBtn, #bars, and .bg-white
+        content.style.display = "none";
     }
+    // Flip the state
+    isMenuOpen = !isMenuOpen;
 });
-
+  
+  
 /* This function is associated with the click event of the 'shop-btn' element, likely a button for a shop or products listing.
 * When the button is clicked, the function toggles the visibility of the 'shop-items' element.
 * If the 'shop-items' are not visible, it displays them.
 * If they're already visible, it hides them.
 */
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('shop-btn').click();
-});
+
 
 document.getElementById('shop-btn').addEventListener('click', function () {
     var shopItems = document.getElementById('shop-items');
-    if (shopItems.style.display === "none") {
-        shopItems.style.display = "block";
-    } else {
+    if (shopItems.style.display === "block") {
         shopItems.style.display = "none";
+    } else {
+        shopItems.style.display = "block";
     }
 });
+
 
