@@ -122,3 +122,31 @@ mainSearchForm.addEventListener('submit', (e) => {
         location.href = `/search/${mainSearchBox.value.toLowerCase()}`
     }
 })
+
+
+/**
+ * This function adjusts the display of elements with the class 'p-text' based on the window width. 
+ * When the window is narrower than a specified threshold, it inserts a line break before the '>>' in the text. 
+ * When the window is wider than the threshold, it removes the line break.
+ * It is designed to enhance the responsive behavior of the webpage, ensuring text displays 
+ * consistently and neatly across various device widths.
+ *
+ */
+
+window.addEventListener('resize', adjustText);
+
+function adjustText() {
+    let textElements = document.querySelectorAll('.p-text');
+    let windowWidth = window.innerWidth;
+
+    textElements.forEach(el => {
+        if (windowWidth < 400) {
+            el.innerHTML = el.innerHTML.replace(' &gt;&gt;', '<br/>&gt;&gt;');
+        } else {
+            el.innerHTML = el.innerHTML.replace('<br/>&gt;&gt;', ' &gt;&gt;');
+        }
+    });
+}
+
+// Run the function initially to handle the case if the page is opened in a small screen
+adjustText();

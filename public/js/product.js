@@ -87,19 +87,6 @@ const setData = (data) => {
     }
 
 
-    // wishlist and cart btn
-    const wishlistBtn = document.querySelector('.wishlist-btn');
-    const cartBtn = document.querySelector('.cart-btn');
-
-    if(wishlistBtn && cartBtn) {
-        wishlistBtn.addEventListener('click', () => {
-            wishlistBtn.innerHTML = add_product_to_cart_or_wishlist('wishlist', data);
-        })
-
-        cartBtn.addEventListener('click', () => {
-            cartBtn.innerHTML = add_product_to_cart_or_wishlist('cart', data);
-        })
-    }
 }
 
 

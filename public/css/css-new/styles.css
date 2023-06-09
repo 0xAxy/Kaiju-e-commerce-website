@@ -1,27 +1,21 @@
-
+/*customize size of $RWASTE and $SCALE image */
 .custom-size {
     width: 20px; /* Adjust this to change the width of the image */
     height: 20px; /* Adjust this to change the height of the image */
     object-fit: contain; /* This makes sure the aspect ratio of the image is preserved */
 }
 
-
-
+/* shortens search box for mobile view */
 @media (max-width: 768px) {  /* Replace 768px with the breakpoint where you want to start shrinking the search box */
     #main-search-box {
         width: 35%; 
     }
 }
 
-
-
-
 /* shifting up animation thats triggered when scrolling */
 #logo-container, .menu, img[src="./img/newlogos/newlogo_3840.png"], h5 {
     transition: transform 0.3s ease, font-size 0.3s ease, margin-top 0.3s ease, opacity 0.3s ease;
 }
-
-
 
 /* pulsing animation */
 .link-container::after {
@@ -36,10 +30,6 @@
 .link-container:hover .pulse-image {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
-
-
-
-
 
 #shop-items {
     display: block;
